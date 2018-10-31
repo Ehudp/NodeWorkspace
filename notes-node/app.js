@@ -8,7 +8,7 @@ const notes=require('./notes');
 //console.log(_.isString(true));
 //console.log(_.isString("true"));
 
-var filterArray=_.uniq(['test',1,'test',1,2,3,4]);
+var filterArray=_.uniq(['test1',1,'test1',1,2,3,4]);
 console.log(filterArray);
 //var res=notes.add(9,-2);
 //console.log(res);
