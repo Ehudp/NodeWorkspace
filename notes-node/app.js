@@ -2,10 +2,16 @@ console.log('starting app.js');
 
 const fs = require('fs');
 const os=require('os');
+const _=require('lodash');
 const notes=require('./notes');
 
-var res=notes.add(9,-2);
-console.log(res);
+//console.log(_.isString(true));
+//console.log(_.isString("true"));
+
+var filterArray=_.uniq(['test',1,'test',1,2,3,4]);
+console.log(filterArray);
+//var res=notes.add(9,-2);
+//console.log(res);
 
 
 //var user=os.userInfo();
