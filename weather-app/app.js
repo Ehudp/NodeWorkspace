@@ -24,8 +24,6 @@ geocode.geocodeAddress(argv.address, (errorMessage, results) => {
         console.log(errorMessage);
     } else {
 
-        //console.log(results.address);
-
         weather.getWeather(results.Latitude, results.Longitude, (errorMessage, weatherResult) => {
 
             if (errorMessage) {
