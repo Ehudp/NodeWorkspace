@@ -1,13 +1,14 @@
 
 const request = require('request');
-const KEY = '0ZYk0xNZdGoJj4ANnehvcKt9DP4Yz1db';
+const MAP_KEY = '0ZYk0xNZdGoJj4ANnehvcKt9DP4Yz1db';
+
 
 var geocodeAddress = (address, callback) => {
 
     var encodeAddress = encodeURIComponent(address);
 
     request({
-        url: `http://www.mapquestapi.com/geocoding/v1/address?key=${KEY}&location=${encodeAddress}}`,
+        url: `http://www.mapquestapi.com/geocoding/v1/address?key=${MAP_KEY}&location=${encodeAddress}}`,
         json: true
     }, (error, response, body) => {
 
@@ -31,3 +32,4 @@ var geocodeAddress = (address, callback) => {
 };
 
 module.exports.geocodeAddress = geocodeAddress;
+
