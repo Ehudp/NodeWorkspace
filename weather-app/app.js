@@ -1,10 +1,10 @@
 const request=require('request');
+const KEY='0ZYk0xNZdGoJj4ANnehvcKt9DP4Yz1db';
 
 request({
-    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=1301%20lombard%20street%20philadelphia&key=AIzaSyBxGECJhXRriXVGMkX9pXpBNNNFLjXox8A',
-    
+    url: 'http://www.mapquestapi.com/geocoding/v1/address?key=0ZYk0xNZdGoJj4ANnehvcKt9DP4Yz1db&location=1301%20lombard%20street%20philadelphia',
     json: true
   }, (error, response, body) => {
-    console.log(body);
+    console.log(JSON.stringify(body,undefined,2));
   });
   
