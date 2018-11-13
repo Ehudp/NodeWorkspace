@@ -19,8 +19,8 @@ var geocodeAddress = (address, callback) => {
         }
         else {
 
-            var location =  body.results[0].locations[0];
-           
+            var location = body.results[0].locations[0];
+
             callback(undefined, {
                 address: location.street,
                 Longitude: location.latLng.lng,
@@ -32,4 +32,5 @@ var geocodeAddress = (address, callback) => {
 };
 
 module.exports.geocodeAddress = geocodeAddress;
+
 
