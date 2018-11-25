@@ -23,5 +23,8 @@ app.post('/todos', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Start on port 3000');
+    console.log('Start listen on port 3000');
 });
+
+module.exports = { app };
+
