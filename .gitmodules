@@ -1,0 +1,3 @@
+[submodule "node-chat-app"]
+	path = node-chat-app
+	url = https://github.com/Ehudp/NodeWorkspace.git
