@@ -40,10 +40,35 @@ const getCountries = async (currencyCode) => {
     return response.data.map((country) => country.name);
 };
 
-getExchangeRate('USD', 'ILS').then((rate) => {
-    console.log(rate);
-});
 
-getCountries('ILS').then((countries) => {
-    console.log(countries);
-});
+// const convertCurrency = (from, to, amount) => {
+
+//     let convertedAmount;
+//     return getExchangeRate(from, to).then((rate) => {
+//         convertedAmount = (amount * rate).toFixed(2);
+//         return getCountries(to);
+//     }).then((countries) => {
+//         return `${amount} ${from} is worth ${convertedAmount} ${to} you can spend it in the following countries ${countries.join(', ')}`;
+//     });
+// };
+
+
+const convertCurrency = async (from, to, amount) => {
+
+
+    var rate = await getExchangeRate(from, to);
+    var convertedAmount = (amount * rate).toFixed(2);
+    var countries = await getCountries(to);
+
+    return `${amount} ${from} is worth ${convertedAmount} ${to} you can spend it in the following countries ${countries.join(', ')}`;
+
+};
+
+convertCurrency('USD', 'ILS', 1).then((message) => console.log(message));
+// getExchangeRate('USD', 'ILS').then((rate) => {
+//     console.log(rate);
+// });
+
+// getCountries('ILS').then((countries) => {
+//     console.log(countries);
+// });
